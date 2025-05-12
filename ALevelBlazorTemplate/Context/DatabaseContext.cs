@@ -1,8 +1,8 @@
-﻿using ALevelBlazorTemplate.Model;
+﻿using PokemonPokedex.Model;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace ALevelBlazorTemplate.Context
+namespace PokemonPokedex.Context
 {
     public class DatabaseContext : IdentityDbContext<User>
     {

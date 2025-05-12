@@ -1,7 +1,7 @@
-﻿using ALevelBlazorTemplate.Model;
+﻿using PokemonPokedex.Model;
 using Microsoft.AspNetCore.Identity;
 
-namespace ALevelBlazorTemplate.Components.Account
+namespace PokemonPokedex.Components.Account
 {
     internal sealed class IdentityUserAccessor(UserManager<User> userManager, IdentityRedirectManager redirectManager)
     {
