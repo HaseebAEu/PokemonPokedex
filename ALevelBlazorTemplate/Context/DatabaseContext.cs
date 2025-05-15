@@ -6,12 +6,13 @@ namespace PokemonPokedex.Context
 {
     public class DatabaseContext : IdentityDbContext<User>
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
+        private IWebHostEnvironment _environment;
+        public DbSet<Pokemon> Pokemons { get; set; }
+        public DbSet<Trainer> Trainers { get; set; }
+        public DatabaseContext(DbContextOptions<DatabaseContext> options, IWebHostEnvironment environment) : base(options)
         {
-            var folder = Environment.SpecialFolder.MyDocuments;
-            var path = Environment.GetFolderPath(folder);
-            var dbPath = Path.Join(path, "database.db");
-            optionbuilder.UseSqlite($"Data Source={dbPath}");
+            _environment = environment;
         }
+
     }
 }
